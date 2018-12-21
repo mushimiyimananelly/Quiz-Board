@@ -6,9 +6,9 @@ body{
     text-align: left;
   }
   #questionsIncomplete{
-    color:grey;
+    color:grey
   }
-  .submit:hover 
+  .submit:hover {
   box-shadow:green;
   background:red;
   color:black;
