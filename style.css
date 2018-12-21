@@ -8,7 +8,7 @@ body{
   #questionsIncomplete{
     color:grey;
   }
-  .submit:hover {
+  .submit:hover 
   box-shadow:green;
   background:red;
   color:black;
