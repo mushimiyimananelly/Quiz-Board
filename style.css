@@ -19,7 +19,7 @@ body{
 #result{
     display: none;
     background-color: lightslategrey;
-    height:100px;
+    height:150px;
     text-align: center;
     font-size: 80px;
 }
