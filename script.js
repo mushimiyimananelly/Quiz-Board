@@ -1,85 +1,29 @@
-var answers = ["infinity","firstName","vowels"];
-var pointPerCorrect = 25;
-
-
-function percentage(score) {
-return "Your score is " + parseInt((score / 75) * 100) + "%";
-}
+// FRONT-END LOGIC
 
 $(document).ready(function(){
-   $("#questions").submit(function (event) {
+    $("form#form").submit(function(event){
+    var q1= $("input:radio[name=questionOneAnswer]:checked").val();
+    var q2= $("input:radio[name=questionTwoAnswer]:checked").val();
+    var q3= $("input:radio[name=questionThreeAnswer]:checked").val();
+    var result=parseInt(q1)+parseInt(q2)+parseInt(q3);
+    $("#result").text("YOU SCORED IS: " +result + "/60");
 
-
-      $('#result').text('');
-      var score = 0;
-      var answerOne = ($("input[type=radio][name=questionOneAnswer]:checked").val());
-      var answerTwo = ($("input[type=radio][name=questionTwoAnswer]:checked").val());
-      var answerThree = ($("input[type=radio][name=questionThreeAnswer]:checked").val());
-
-      if (answerOne === undefined || answerTwo === undefined || answerThree === undefined) {
-  $('#questionsIncomplete').text('Please Complete questions Before Submitting');
-  $('#questionsIncomplete').fadeOut(10000);
-} else {
-         if (answerOne === answers[0]) {
-    score += pointPerCorrect;
-  }
-         if (answerTwo === answers[1]) {
-    score += pointPerCorrect;
-  }
-         if (answerThree === answers[2]) {
-    score += pointPerCorrect;
-  }
-
-
-        $("input[type=radio][name=questionOneChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionTwoChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionThreeChoice]:checked").prop('checked', false);
-        $('#questionsIncomplete').text('');
-        $('#result').text(percentage(score));
-}
-          event.preventDefault();
- });
+    $("button").click(function() {
+        $("#result").toggle();
+        $("#form").toggle();
+    });
+    $("form#form").hide();
+    $("#result").show();
+    event.preventDefault();
+    });
 });
 
-var answers = ["infinity","firstName","vowels"];
-var pointPerCorrect = 25;
+// BUSINESS LOGIC
 
+function add(q1,q2,q3) {
+    var score = q1 + q2 + q3;
 
-function percentage(score) {
-return "Your score is " + parseInt((score / 75) * 100) + "%";
+    return score;
 }
 
-$(document).ready(function(){
-   $("#questions").submit(function (event) {
 
-
-      $('#result').text('');
-      var score = 0;
-      var answerOne = ($("input[type=radio][name=questionOneAnswer]:checked").val());
-      var answerTwo = ($("input[type=radio][name=questionTwoAnswer]:checked").val());
-      var answerThree = ($("input[type=radio][name=questionThreeAnswer]:checked").val());
-
-      if (answerOne === undefined || answerTwo === undefined || answerThree === undefined) {
-  $('#questionsIncomplete').text('Please Complete questions Before Submitting');
-  $('#questionsIncomplete').fadeOut(10000);
-} else {
-         if (answerOne === answers[0]) {
-    score += pointPerCorrect;
-  }
-         if (answerTwo === answers[1]) {
-    score += pointPerCorrect;
-  }
-         if (answerThree === answers[2]) {
-    score += pointPerCorrect;
-  }
-
-
-        $("input[type=radio][name=questionOneChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionTwoChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionThreeChoice]:checked").prop('checked', false);
-        $('#questionsIncomplete').text('');
-        $('#result').text(percentage(score));
-}
-          event.preventDefault();
- });
-});

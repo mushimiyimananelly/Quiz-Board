@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>quiz-board</title>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <h1> Quiz board</h1>
-    <p>welcome to our after-school computer club quiz.</p>
-  </div>
-  <form id='questions'></form>
-      <div id='questionOne'>
-      <div class='question'>1. What outcome do you get in javascript after div number by <strong>zero</strong>?</div>
-      <dv class='answer'></dv>
-        
-          <input type="radio" name='questionOneAnswer' value='six'>six
-        </div>
-        <div class='answer'>
-          <input type="radio" name='questionOneAnswer' value='infinity'>infinity
-        </div>
-        <div class='answer'>
-          <input type="radio" name='questionOneAnswer' value='five'>five
-        </div>
-      </div>
-      <br>
-      <div id='questionTwo'>
-        <div class='question'>2. Which <strong>variable</strong> is correct?</div>
-        <div class='answer'>
-          <input type="radio" name='questionTwoAnswer' value.='first six'>first six
-        </div>
-        <div class='answer'>
-          <input type="radio" name='questionTwoAnswer' value='First six'>First six
-        </div>
-        <div class='answer'>
-          <input type="radio" name='questionTwoAswer' value='FIRSTname'>FIRST five
-        </div>
-      </div>
-      <br>
-      <div id='questionTwo'>
-          <div class='question'>2. Which <strong>variable</strong> is correct?</div>
-          <div class='answer'>
-            <input type="radio" name='questionTwoAnswer' value.='first six'>first six
-          </div>
-          <div class='answer'>
-              <input type="radio" name='questionTwoAswer' value='FIRSTname'>FIRST five
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>quiz-board</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="panel-body">
+          <div class="well">
+            <div class="panel panel-heading">
+              <h1> Quiz board</h1>
             </div>
           </div>
-          <br>
-  
-          <div id='questionThree'>
-            <div class='question'>3. Which one of the following is not a <strong>datatype</strong>?</div>
-            <div class='answer'>
-              <input type="radio" name='questionThreeAnswer' value='vowels'>vowels
-            </div>
-            <div class='answer'>
-              <input type="radio" name='questionThreeAnswer' value='boolean'>boolean
-            </div>
-            <div class='answer'>
-              <input type="radio" name='questionThreeAnswer' value='strings'>strings
-            </div>
+          <div class="well">
+            <p>Welcome to our after-school computer club quiz.</p>
+            <p>Total number of questions is three, all questions must be answered.</p>
+            <p>Each question carry 20 marks each.</p>
           </div>
-          <br>
-
-        <div id='questionsIncomplete'></div>
-        <br>
-        <div>
+          <form id="form">
+            <div class="well">
+              <p>1. What outcome do you get in javascript after div number by <strong>zero</strong>?</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name='questionOneAnswer' value='0' required>six
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionOneAnswer' value='20' required>infinity
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionOneAnswer' value='0' required>five
+                </label>
+              </div>
+            </div>
+            <div class="well">
+              <p>2. Which <strong>variable</strong> is correct?</p>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionTwoAnswer' value='0' required>second six
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionTwoAnswer' value='0' require>First six
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionTwoAnswer' value='20' required>firstName
+                </label>
+              </div>
+            </div>
+            <div class="well">
+              <p>3. Which one of the following is not a <strong>datatype</strong>?</p>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionThreeAnswer' value='20' required>vowels
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionThreeAnswer' value='0' required>boolean
+                </label>
+              </div>
+              <div class='radio'>
+                <label>
+                  <input type="radio" name='questionThreeAnswer' value='0' required>strings
+                </label>
+              </div>
+            </div>
             <button type='submit' class="submit">SUBMIT</button>
-          </div>
-        </form>
-        <br>
-  
-        <div id='result'></div>
+          </form><br>
+          <div id='result'></div> 
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <img src="https://i.gifer.com/5ARn.gif" width="400">
+          <script src="script.js"></script>
+        </div>
       </div>
-      <script src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"></script>
-      <img src="https://i.gifer.com/5ARn.gif" width="400">
-      <script src="js/scripts.js"></script>
-   </body>
-   </html>
+    </div> 
+  </body>
+</html>
 
 
 

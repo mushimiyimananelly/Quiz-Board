@@ -2,12 +2,27 @@ body{
     background-color: dodgerblue;
 }
   
-   #questions{
-    text-align: left;
-  }
-  #questionsIncomplete{
-    color:grey
-  }
+  h1{
+    text-align: center;
+}
+.jumbotron{
+    background-color: darkslategray;
+    background-attachment: fixed;
+}
+.well{
+    background-color: white;
+}
+.panel{
+    background-color: rgb(197, 134, 118);
+    
+}
+#result{
+    display: none;
+    background-color: lightslategrey;
+    height:100px;
+    text-align: center;
+    font-size: 80px;
+}
   .submit:hover {
   box-shadow:green;
   background:red;
